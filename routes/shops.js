@@ -6,11 +6,11 @@ const checkRole = require('../middleware/checkRole');
 
 
 // shops
-router.get('/', Auth, shopController.getShops)
+router.get('/', shopController.getShops)
 router.get('/search',Auth, shopController.searchShops)
-router.get('/:id',Auth, shopController.getShopById)
+router.get('/:id', shopController.getShopById)
 router.put('/:id',Auth, shopController.editShop)
-router.delete('/:id',Auth, shopController.deleteShop)
+router.delete('/delete/:id',Auth, shopController.deleteShop)
 router.post('/', Auth,checkRole('admin'), shopController.createShop)
 
 module.exports = router

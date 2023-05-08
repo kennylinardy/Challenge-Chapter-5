@@ -21,4 +21,4 @@ router.use('/api/v1/products/', Products);
 
 // Dashboard
 
-module.exports 
+module.exports = router
